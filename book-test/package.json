@@ -1,0 +1,23 @@
+{
+  "name": "@wsmckenz/book-test",
+  "version": "0.0.2",
+  "description": "Some package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csci620/app.git"
+  },
+  "keywords": [
+    "books",
+    "csci620"
+  ],
+  "author": "wsmckenz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csci620/app/issues"
+  },
+  "homepage": "https://github.com/csci620/app#readme"
+}

@@ -18,6 +18,10 @@
     "@angular/platform-browser": "~11.1.0-next.3",
     "@angular/platform-browser-dynamic": "~11.1.0-next.3",
     "@angular/router": "~11.1.0-next.3",
+    "@wsmckenz/book-info": "file:../book-info",
+    "@wsmckenz/book-test": "^0.0.2",
+    "bootstrap": "latest",
+    "jquery": "latest",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

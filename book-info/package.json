@@ -1,0 +1,27 @@
+{
+  "name": "@wsmckenz/book-info",
+  "version": "1.0.4",
+  "description": "Get Book Information from Google",
+  "main": "index.js",
+  "scripts": {
+    "test": "ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csci620/app.git"
+  },
+  "keywords": [
+    "books",
+    "csci620",
+    "csuchico"
+  ],
+  "author": "wsmckenz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csci620/app/issues"
+  },
+  "homepage": "https://github.com/csci620/app#readme",
+  "devDependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}

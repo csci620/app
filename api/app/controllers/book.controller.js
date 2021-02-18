@@ -1,5 +1,8 @@
 const db = require("../models");
 const Book = db.books;
+const bi = require("@wsmckenz/book-info");
+
+ console.dir(bi)
 
 exports.create = (req, res) => {
     // Validate request
@@ -7,6 +10,10 @@ exports.create = (req, res) => {
       res.status(400).send({ message: "Content can not be empty!" });
       return;
     }
+
+    bi.get_info(req.body.title, req.body.author, data =>{
+      console.log(data);
+    })
   
     // Create a Book
     const book = new Book({

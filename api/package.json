@@ -9,9 +9,13 @@
   "author": "wsmckenz",
   "license": "MIT",
   "dependencies": {
+    "@wsmckenz/book-info": "file:../book-info",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.8.10"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
