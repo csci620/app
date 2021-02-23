@@ -1,8 +1,8 @@
 const db = require("../models");
 const Book = db.books;
-const bi = require("@wsmckenz/book-info");
+//const bi = require("@wsmckenz/book-info");
 
- console.dir(bi)
+//console.dir(bi)
 
 exports.create = (req, res) => {
     // Validate request
@@ -11,9 +11,11 @@ exports.create = (req, res) => {
       return;
     }
 
-    bi.get_info(req.body.title, req.body.author, data =>{
-      console.log(data);
-    })
+//    bi.get_info(req.body.title, req.body.author, data =>{
+//      if (data.totalItems > 0)
+//      
+//      console.log(data.items[0]);
+//    })
   
     // Create a Book
     const book = new Book({

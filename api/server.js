@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-var corsOptions = {
-  origin: "http://localhost:8080"
-};
+//var corsOptions = {
+//  origin: "http://localhost:8080"
+//};
 
 app.use(cors());
 
@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to books application." });
+  res.json({ message: "Welcome to books api." });
 });
 
 require("./app/routes/book.routes")(app);

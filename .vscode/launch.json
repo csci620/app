@@ -4,15 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
-        {
+            {
             "type": "pwa-node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Launch API Tests",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "csuchico/course/src/host_vars/javascript/.files/classes.js"
+            "program": "npx",
+            "cwd": "${workspaceFolder}/csuchicoapp/api",
+            "args": ["mocha"]
         }
     ]
 }

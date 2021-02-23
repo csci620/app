@@ -1,0 +1,3 @@
+fetch('htts://www.googleapis.com/books/v1/volumes?q=tale_of_two_cities+inauthor:dickens')
+  .then(response => response.json())
+  .then(data => console.log(`Found ${data.totalItems} hits`));
