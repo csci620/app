@@ -10,6 +10,8 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.static('public', {extensions: ['html']}))
+
 const db = require("./app/models");
 db.mongoose
   .connect(db.url, {

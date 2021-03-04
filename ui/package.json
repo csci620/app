@@ -24,8 +24,7 @@
     "bootstrap": "latest",
     "jquery": "latest",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.1",
