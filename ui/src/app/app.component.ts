@@ -5,13 +5,16 @@ import { Component } from '@angular/core';
   template: `
   <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Home</a>
+    <a href="#" class="navbar-brand">Books Home</a>
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
         <a routerLink="books" class="nav-link">List</a>
       </li>
       <li class="nav-item">
         <a routerLink="add" class="nav-link">Add</a>
+      </li>
+      <li class="nav-item">
+        <app-authentication-button></app-authentication-button>
       </li>
     </div>
   </nav>

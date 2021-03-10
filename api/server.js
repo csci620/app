@@ -1,14 +1,32 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
 const app = express();
 
-//var corsOptions = {
-//  origin: "http://localhost:8080"
-//};
 
-app.use(cors());
+var jwt = require('express-jwt');
+var jwks = require('jwks-rsa');
+
+var jwtCheck = jwt({
+  secret: jwks.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: 'https://csci620.us.auth0.com/.well-known/jwks.json'
+}),
+audience: 'https://localhost:3000/books',
+issuer: 'https://csci620.us.auth0.com/',
+algorithms: ['RS256']
+});
+
+app.use(jwtCheck);
+
+
+var corsOptions = {
+  origin: "http://localhost:4200"
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.static('public', {extensions: ['html']}))
 
