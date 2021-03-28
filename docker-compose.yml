@@ -7,7 +7,10 @@ services:
   # image: nginx:1.17.1-alpine
   ports:
   - "4200:80" # specify port mapping
- 
+  - "443:443"
+  volumes:
+  - ./ssl/mybooks.com.crt:/etc/nginx/mybooks.com.crt
+  - ./ssl/mybooks.com.key:/etc/nginx/mybooks.com.key
  api: # name of the second service
   build: api # specify the directory of the Dockerfile
   ports:
@@ -19,3 +22,6 @@ services:
   image: mongo # specify image to build container from
   ports:
   - "27017:27017" # specify port forwarding
+
+ certbot:
+  image: certbot/certbot
