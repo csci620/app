@@ -4,11 +4,22 @@ const expect = require("chai").expect;
 const test_data = [
   ["A Tale of Two Cities", "Dickens, Charles"],
   ["The Principles of Mathematics", "Russel, Bertrand"],
-  ["Pride and Prejudice", "Austen, Jane"],
+  ["Pride and Prejudice", "Austen, Jane", [{publishDate: "12/12/1875", publisher: "random house"}]],
   ["Great Expectations", "Dickens, Charles"],
   ["The Name of the Rose", "Eco, Umberto"],
   ["The Godfather", "Puzo, Mario"]
 ];
+
+const one_book = {
+  name: "Pride and Prejudice",
+  author: "Austen, Jane",
+  editions: [
+    {
+      publishDate: "12/12/1863",
+      publisher: "Random House"
+    }
+  ]
+}
 
 describe("DELETE /books", function () {
   it("Deletes all books", async function () {
@@ -25,7 +36,7 @@ describe("POST /books", function () {
   it("Adds a new book", async function () {
     const response = await request
       .post("/books")
-      .send({ title: test_data[0][0], author: test_data[0][1] });
+      .send(one_book);
 
     expect(response.status).to.eql(200);
   });
@@ -39,7 +50,7 @@ describe("GET /books", function () {
     for (let book of test_data) {
       await request
         .post("/books")
-        .send({ title: book[0], author: book[1] });
+        .send({ title: book[0], author: book[1], editions: book[2] || []});
 
     }
 

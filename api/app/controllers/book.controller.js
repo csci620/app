@@ -22,7 +22,8 @@ exports.create = (req, res) => {
       title: req.body.title,
       description: req.body.description,
       author: req.body.author,
-      published: req.body.published ? req.body.published : false
+      published: req.body.published ? req.body.published : false,
+      editions: req.body.editions
     });
   
     // Save Book in the database
