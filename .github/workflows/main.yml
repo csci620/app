@@ -40,7 +40,7 @@ jobs:
         with:
           context: ui
           push: true
-          tags: csci620-app/ui:latest
+          tags: wsmckenz/csci620-app-ui:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
