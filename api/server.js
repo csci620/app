@@ -3,6 +3,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 
+const swaggerUi = require("swagger-ui-express"),
+swaggerDocument = require("./swagger.json");
 
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
@@ -21,12 +23,24 @@ algorithms: ['RS256']
 
 app.use(jwtCheck);
 
-
+var whitelist = [
+  'http://localhost:4200', 
+  'https://csci620-app.azurewebsites.net'
+]
 var corsOptions = {
-  origin: "http://localhost:4200"
-};
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error(`Origin: ${origin} is not allowed by CORS`))
+    }
+  }
+}
+ 
 
 app.use(cors(corsOptions));
+
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.static('public', {extensions: ['html']}))
 
