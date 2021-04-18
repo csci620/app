@@ -35,12 +35,23 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
-        id: docker_build
+        id: docker_build_ui
         uses: docker/build-push-action@v2
         with:
           context: ui
           push: true
           tags: wsmckenz/csci620-app-ui:latest
       -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        name: Build and push
+        id: docker_build_api
+        uses: docker/build-push-action@v2
+        with:
+          context: api
+          push: true
+          tags: wsmckenz/csci620-app-api:latest
+      -
+        name: Image digest (UI)
+        run: echo ${{ steps.docker_build_ui.outputs.digest }}
+      -
+        name: Image digest (API)
+        run: echo ${{ steps.docker_build_api.outputs.digest }}
