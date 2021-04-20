@@ -6,6 +6,7 @@ const app = express();
 const swaggerUi = require("swagger-ui-express"),
 swaggerDocument = require("./swagger.json");
 
+// setup jwt
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
 
