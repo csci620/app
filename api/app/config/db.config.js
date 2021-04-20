@@ -1,3 +1,3 @@
 module.exports = {
-    url: "mongodb://localhost:27017/books"
+    url: "mongodb+srv://app:mepM3XzWWfBj70qW@cluster0.pca6q.mongodb.net/books?retryWrites=true&w=majority"
 };
