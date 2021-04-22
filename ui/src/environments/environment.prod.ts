@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000/api/books'
+  apiUrl:   apiUrl: 'https://csci620-books-api.azurewebsites.net/api/books'
 };

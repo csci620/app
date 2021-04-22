@@ -17,6 +17,9 @@ import { SignupButtonComponent } from './components/signup-button/signup-button.
 import { AuthenticationButtonComponent } from './components/authentication-button/authentication-button.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
+
+import { environment } from './../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,7 @@ import { AuthHttpInterceptor } from '@auth0/auth0-angular';
       clientId: 'pF1XoMSehwLWuBwO72kY1x5bgL3lsBKv',
       audience: 'https://localhost:3000/books',
       httpInterceptor: {
-        allowedList: [`http://localhost:3000/api/*`],
+        allowedList: [`${environment.apiUrl}/api/*`],
       },
     }),
   ],
