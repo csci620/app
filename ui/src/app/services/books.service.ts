@@ -9,7 +9,7 @@ const httpOptions = {
   })
 };
 
-const baseUrl = environment.apiUrl;
+const baseUrl = `${environment.apiUrl}/api/books`;
 
 
 @Injectable({
