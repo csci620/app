@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api/books'
+  apiUrl: 'https://csci620-books-api.azurewebsites.net/api/books'
 };
 
 /*
