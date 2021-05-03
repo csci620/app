@@ -1,11 +1,12 @@
 {
-  "name": "ui",
-  "short_name": "ui",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
-  "scope": "./",
+  "name": "CSCI 620 Books Application",
+  "short_name": "books",
   "start_url": "./",
+  "theme_color": "#008080",
+  "background_color": "#008B8B",
+  "display": "standalone",
+  "description": "Sample Books Angular App",
+  "scope": "./",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
