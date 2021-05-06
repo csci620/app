@@ -67,7 +67,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to books api." });
+  res.json({ message: "Welcome to books api!" });
 });
 
 require("./app/routes/book.routes")(app);
