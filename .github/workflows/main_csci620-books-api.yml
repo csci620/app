@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: ${{ secrets.AzureAppService_ContainerUsername_0af2977115164798848d6939e85f2d7e }}/wsmckenz/csci620-app-api:${{ github.sha }}
-        file: ./Dockerfile
+        context: api
 
   deploy:
     runs-on: ubuntu-latest
